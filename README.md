@@ -2,7 +2,7 @@
 
 ## Project Info
 
-**URL**: [Project URL](https://lovable.dev/projects/72103870-e997-4a71-a3da-4d6c8431d033)
+**URL**: https://chroma-design-system.netlify.app
 
 ## How Can I Edit This Code?
 
