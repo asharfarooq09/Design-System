@@ -1,0 +1,403 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    /* Surface colors */
+    --surface: 0 0% 100%;
+    --surface-foreground: 222 47% 11%;
+    --surface-1: 210 40% 98%;
+    --surface-2: 210 38% 96%;
+    --surface-3: 210 35% 94%;
+
+    /* Card component colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    /* Popover component colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary - Indigo */
+    --primary: 229 84% 58%;
+    --primary-foreground: 210 40% 98%;
+    --primary-50: 226 100% 97%;
+    --primary-100: 224 100% 93%;
+    --primary-200: 223 100% 86%;
+    --primary-300: 227 94% 76%;
+    --primary-400: 229 84% 68%;
+    --primary-500: 229 84% 58%;
+    --primary-600: 230 71% 51%;
+    --primary-700: 231 69% 45%;
+    --primary-800: 233 60% 37%;
+    --primary-900: 235 52% 30%;
+
+    /* Secondary - Teal */
+    --secondary: 187 96% 38%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-50: 183 100% 96%;
+    --secondary-100: 185 96% 90%;
+    --secondary-200: 186 94% 82%;
+    --secondary-300: 187 92% 69%;
+    --secondary-400: 188 94% 51%;
+    --secondary-500: 187 96% 38%;
+    --secondary-600: 186 91% 33%;
+    --secondary-700: 184 85% 28%;
+    --secondary-800: 182 75% 24%;
+    --secondary-900: 181 65% 21%;
+
+    /* Tertiary - Purple */
+    --tertiary: 262 83% 58%;
+    --tertiary-foreground: 210 40% 98%;
+    --tertiary-50: 259 100% 97%;
+    --tertiary-100: 259 100% 93%;
+    --tertiary-200: 260 100% 86%;
+    --tertiary-300: 261 94% 76%;
+    --tertiary-400: 262 83% 68%;
+    --tertiary-500: 262 83% 58%;
+    --tertiary-600: 263 70% 50%;
+    --tertiary-700: 263 67% 43%;
+    --tertiary-800: 265 61% 36%;
+    --tertiary-900: 266 56% 30%;
+
+    /* Neutral - Gray */
+    --neutral: 220 14% 96%;
+    --neutral-50: 220 20% 98%;
+    --neutral-100: 220 14% 96%;
+    --neutral-200: 220 13% 91%;
+    --neutral-300: 216 12% 84%;
+    --neutral-400: 218 11% 65%;
+    --neutral-500: 220 9% 46%;
+    --neutral-600: 215 14% 34%;
+    --neutral-700: 217 19% 27%;
+    --neutral-800: 215 28% 17%;
+    --neutral-900: 221 39% 11%;
+
+    /* Semantic - Success */
+    --success: 142 71% 45%;
+    --success-foreground: 210 40% 98%;
+    --success-50: 138 76% 97%;
+    --success-100: 141 84% 93%;
+    --success-200: 141 79% 85%;
+    --success-300: 142 77% 73%;
+    --success-400: 142 69% 58%;
+    --success-500: 142 71% 45%;
+    --success-600: 142 76% 36%;
+    --success-700: 142 72% 29%;
+    --success-800: 143 64% 24%;
+    --success-900: 144 61% 20%;
+
+    /* Semantic - Info */
+    --info: 217 91% 60%;
+    --info-foreground: 210 40% 98%;
+    --info-50: 214 100% 97%;
+    --info-100: 214 100% 93%;
+    --info-200: 213 100% 87%;
+    --info-300: 212 100% 77%;
+    --info-400: 213 97% 68%;
+    --info-500: 217 91% 60%;
+    --info-600: 221 83% 53%;
+    --info-700: 224 76% 48%;
+    --info-800: 226 71% 40%;
+    --info-900: 224 64% 33%;
+
+    /* Semantic - Warning */
+    --warning: 45 93% 47%;
+    --warning-foreground: 210 40% 98%;
+    --warning-50: 48 100% 96%;
+    --warning-100: 48 96% 89%;
+    --warning-200: 48 97% 77%;
+    --warning-300: 46 97% 65%;
+    --warning-400: 43 96% 56%;
+    --warning-500: 45 93% 47%;
+    --warning-600: 38 92% 42%;
+    --warning-700: 31 81% 36%;
+    --warning-800: 26 73% 30%;
+    --warning-900: 22 58% 26%;
+
+    /* Semantic - Error */
+    --error: 0 91% 64%;
+    --error-foreground: 210 40% 98%;
+    --error-50: 0 100% 97%;
+    --error-100: 0 100% 94%;
+    --error-200: 0 98% 88%;
+    --error-300: 0 94% 82%;
+    --error-400: 0 91% 71%;
+    --error-500: 0 91% 64%;
+    --error-600: 0 85% 57%;
+    --error-700: 0 74% 42%;
+    --error-800: 0 62% 36%;
+    --error-900: 0 53% 30%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Muted */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent */
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    /* Border, input, ring */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 84% 70%;
+
+    /* Sidebar styles */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 229 84% 58%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 222 84% 70%;
+
+    /* Border radius */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Base colors */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    /* Surface colors */
+    --surface: 222 47% 11%;
+    --surface-foreground: 210 40% 98%;
+    --surface-1: 223 47% 13%;
+    --surface-2: 224 47% 16%;
+    --surface-3: 223 47% 19%;
+
+    /* Card component colors */
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    /* Popover component colors */
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary - Indigo */
+    --primary: 229 84% 58%;
+    --primary-foreground: 210 40% 98%;
+    --primary-50: 226 100% 97%;
+    --primary-100: 224 100% 93%;
+    --primary-200: 223 100% 86%;
+    --primary-300: 227 94% 76%;
+    --primary-400: 229 84% 68%;
+    --primary-500: 229 84% 58%;
+    --primary-600: 230 71% 51%;
+    --primary-700: 231 69% 45%;
+    --primary-800: 233 60% 37%;
+    --primary-900: 235 52% 30%;
+
+    /* Secondary - Teal */
+    --secondary: 187 96% 38%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-50: 183 100% 96%;
+    --secondary-100: 185 96% 90%;
+    --secondary-200: 186 94% 82%;
+    --secondary-300: 187 92% 69%;
+    --secondary-400: 188 94% 51%;
+    --secondary-500: 187 96% 38%;
+    --secondary-600: 186 91% 33%;
+    --secondary-700: 184 85% 28%;
+    --secondary-800: 182 75% 24%;
+    --secondary-900: 181 65% 21%;
+
+    /* Tertiary - Purple */
+    --tertiary: 262 83% 58%;
+    --tertiary-foreground: 210 40% 98%;
+    --tertiary-50: 259 100% 97%;
+    --tertiary-100: 259 100% 93%;
+    --tertiary-200: 260 100% 86%;
+    --tertiary-300: 261 94% 76%;
+    --tertiary-400: 262 83% 68%;
+    --tertiary-500: 262 83% 58%;
+    --tertiary-600: 263 70% 50%;
+    --tertiary-700: 263 67% 43%;
+    --tertiary-800: 265 61% 36%;
+    --tertiary-900: 266 56% 30%;
+
+    /* Neutral - Gray */
+    --neutral: 216 12% 84%;
+    --neutral-50: 220 20% 98%;
+    --neutral-100: 220 14% 96%;
+    --neutral-200: 220 13% 91%;
+    --neutral-300: 216 12% 84%;
+    --neutral-400: 218 11% 65%;
+    --neutral-500: 220 9% 46%;
+    --neutral-600: 215 14% 34%;
+    --neutral-700: 217 19% 27%;
+    --neutral-800: 215 28% 17%;
+    --neutral-900: 221 39% 11%;
+
+    /* Semantic - Success */
+    --success: 142 69% 58%;
+    --success-foreground: 210 40% 98%;
+    --success-50: 138 76% 97%;
+    --success-100: 141 84% 93%;
+    --success-200: 141 79% 85%;
+    --success-300: 142 77% 73%;
+    --success-400: 142 69% 58%;
+    --success-500: 142 71% 45%;
+    --success-600: 142 76% 36%;
+    --success-700: 142 72% 29%;
+    --success-800: 143 64% 24%;
+    --success-900: 144 61% 20%;
+
+    /* Semantic - Info */
+    --info: 213 97% 68%;
+    --info-foreground: 210 40% 98%;
+    --info-50: 214 100% 97%;
+    --info-100: 214 100% 93%;
+    --info-200: 213 100% 87%;
+    --info-300: 212 100% 77%;
+    --info-400: 213 97% 68%;
+    --info-500: 217 91% 60%;
+    --info-600: 221 83% 53%;
+    --info-700: 224 76% 48%;
+    --info-800: 226 71% 40%;
+    --info-900: 224 64% 33%;
+
+    /* Semantic - Warning */
+    --warning: 43 96% 56%;
+    --warning-foreground: 210 40% 98%;
+    --warning-50: 48 100% 96%;
+    --warning-100: 48 96% 89%;
+    --warning-200: 48 97% 77%;
+    --warning-300: 46 97% 65%;
+    --warning-400: 43 96% 56%;
+    --warning-500: 45 93% 47%;
+    --warning-600: 38 92% 42%;
+    --warning-700: 31 81% 36%;
+    --warning-800: 26 73% 30%;
+    --warning-900: 22 58% 26%;
+
+    /* Semantic - Error */
+    --error: 0 91% 71%;
+    --error-foreground: 210 40% 98%;
+    --error-50: 0 100% 97%;
+    --error-100: 0 100% 94%;
+    --error-200: 0 98% 88%;
+    --error-300: 0 94% 82%;
+    --error-400: 0 91% 71%;
+    --error-500: 0 91% 64%;
+    --error-600: 0 85% 57%;
+    --error-700: 0 74% 42%;
+    --error-800: 0 62% 36%;
+    --error-900: 0 53% 30%;
+
+    /* Destructive */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Muted */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent */
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Border, input, ring */
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 224 76% 48%;
+
+    /* Sidebar styles */
+    --sidebar-background: 223 47% 13%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 229 84% 58%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 224 76% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Define focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Scrollbar styles */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-neutral-100 dark:bg-neutral-800 rounded-full;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-neutral-300 dark:bg-neutral-600 rounded-full hover:bg-neutral-400 dark:hover:bg-neutral-500;
+  }
+
+  /* Typography utility classes */
+  .h1 {
+    @apply text-4xl font-bold tracking-tight lg:text-5xl;
+  }
+
+  .h2 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+
+  .h3 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+
+  .h4 {
+    @apply text-xl font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+  
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+  }
+}
